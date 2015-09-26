@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/" />
+    <title>Comments</title>
+    <script src="https://github.jspm.io/jmcriffey/bower-traceur-runtime@0.0.91/traceur-runtime.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/systemjs/0.18.4/system.src.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/1.1.1/js/md5.js"></script>
+    <script>
+      System.config({
+          defaultJSExtensions: true,
+          baseURL: '/',
+          paths: {
+              'app': '/app.js',
+              'components/*': 'components/*.js',
+              'services/*': 'services/*.js'
+          }
+      });
+    </script>
+    <script src="https://code.angularjs.org/2.0.0-alpha.36/angular2.dev.js"></script>
+</head>
+<body>
+    <my-app>Loading...</my-app>
+
+    <script>
+        System.import('app');
+    </script>
+    <style>
+        .main-wrapper {
+            display: -ms-flex;
+            display: -webkit-flex;
+            display: flex;
+            -ms-flex-direction: column;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        form, .comments-section {
+            display: -ms-flex;
+            display: -webkit-flex;
+            display: flex;
+            -ms-flex-direction: column;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            -ms-flex-wrap: wrap-reverse;
+            -webkit-flex-wrap: wrap-reverse;
+            flex-wrap: wrap-reverse;
+            padding: 20px;
+        }
+        
+        form {
+            background: #EFEFEF;
+        }
+        
+        input, textarea {
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #C7C7C7;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        textarea {
+            resize: none;
+            height: 40px;
+        }
+        
+        button {
+            background-color: #40A8DD;
+            color: white;
+            font-size: 11px;
+            width: 70px;
+            padding: 9px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            margin-bottom: 7px;
+            cursor: pointer;
+        }
+        
+        .comments-section input {
+            margin-top: 10px;
+        }
+        
+        ul {
+            display: -ms-flex;
+            display: -webkit-flex;
+            display: flex;
+            -ms-flex-direction: column;
+            -webkit-flex-direction: column;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        li img {
+            width: 45px;
+            height: 45px;
+            border-radius: 3px;
+        }
+        
+        li span {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 7px;
+            width: calc(100% - 57px);
+        }
+        
+        li span h3 {
+            margin: 3px 0;
+            font-size: 15px;
+        }
+        
+        li span p {
+            margin: 0;
+            font-size: 15px;
+        }
+    </style>
+</body>
+</html>
